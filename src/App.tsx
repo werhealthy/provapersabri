@@ -1,4 +1,5 @@
 import { HeroVisual } from './components/HeroVisual'
+import { MethodStory } from './components/MethodStory'
 import { siteContent } from './content/site'
 
 export default function App() {
@@ -47,8 +48,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="placeholder-section" id="metodo" aria-label="Prossimo step">
-        <p>Step successivo: storytelling “Noise → Signal → Action”.</p>
+      <MethodStory />
+
+      <section className="placeholder-section" id="insight" aria-label="Prossimo step">
+        <p>Step successivo: rendere visibili gli insight e il valore del prodotto.</p>
       </section>
     </main>
   )
