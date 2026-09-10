@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { siteContent } from '../content/site'
 
 export function MethodStory() {
@@ -39,7 +39,7 @@ export function MethodStory() {
               <figure
                 className={`method-shot${index === activeIndex ? ' is-active' : ''}`}
                 key={step.id}
-                style={{ '--offset': offset } as React.CSSProperties}
+                style={{ '--offset': offset } as CSSProperties}
               >
                 <img src={step.image} alt="" loading={index === 0 ? 'eager' : 'lazy'} />
                 <figcaption className="method-shot__ui">
