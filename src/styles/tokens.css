@@ -22,6 +22,12 @@
   --shadow-card: 0 18px 60px rgba(13, 16, 58, 0.12);
   --shadow-soft: 0 10px 40px rgba(13, 16, 58, 0.08);
 
+  --motion-fast: 180ms;
+  --motion-base: 480ms;
+  --motion-slow: 720ms;
+  --motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+
   --page-gutter: clamp(18px, 3vw, 48px);
   --content-max: 1480px;
 }
