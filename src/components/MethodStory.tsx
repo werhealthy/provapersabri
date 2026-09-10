@@ -26,6 +26,7 @@ export function MethodStory() {
   const activeStep = siteContent.method.steps[activeIndex]
 
   const jumpToStep = (index: number) => {
+    setActiveIndex(index)
     markers.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
