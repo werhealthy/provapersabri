@@ -1,0 +1,217 @@
+.hero__panel {
+  transform-origin: 50% 20%;
+  animation: hero-panel-in var(--motion-slow) var(--motion-ease-enter) both;
+}
+
+.nav-shell {
+  animation: fade-down var(--motion-base) 120ms var(--motion-ease-enter) both;
+}
+
+.eyebrow {
+  animation: fade-up var(--motion-base) 220ms var(--motion-ease-enter) both;
+}
+
+.hero h1 span {
+  will-change: transform, opacity, clip-path;
+  animation: headline-push var(--motion-slow) var(--motion-ease-enter) both;
+}
+
+.hero h1 span:nth-child(1) { animation-delay: 260ms; }
+.hero h1 span:nth-child(2) { animation-delay: 340ms; }
+.hero h1 span:nth-child(3) { animation-delay: 420ms; }
+
+.hero__body {
+  animation: fade-up var(--motion-base) 520ms var(--motion-ease-enter) both;
+}
+
+.hero__actions {
+  animation: fade-up var(--motion-base) 600ms var(--motion-ease-enter) both;
+}
+
+.signal-orbit {
+  transform-origin: center;
+  animation:
+    orbit-in var(--motion-slow) 320ms var(--motion-ease-enter) both,
+    orbit-breathe 7s 1.4s ease-in-out infinite;
+}
+
+.signal-card {
+  will-change: transform, opacity;
+}
+
+.signal-card--1 {
+  animation:
+    signal-1-in 680ms 520ms var(--motion-ease-enter) both,
+    signal-1-float 5.6s 1.35s ease-in-out infinite;
+}
+
+.signal-card--2 {
+  animation:
+    signal-2-in 680ms 620ms var(--motion-ease-enter) both,
+    signal-2-float 6.2s 1.45s ease-in-out infinite;
+}
+
+.signal-card--3 {
+  animation:
+    signal-3-in 680ms 720ms var(--motion-ease-enter) both,
+    signal-3-float 5.9s 1.55s ease-in-out infinite;
+}
+
+.insight-card {
+  will-change: transform, opacity;
+  animation:
+    insight-in 760ms 820ms var(--motion-ease-enter) both,
+    insight-breathe 6.8s 1.8s ease-in-out infinite;
+}
+
+.insight-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,.08) 45%, transparent 70%);
+  transform: translateX(-110%);
+  animation: insight-sheen 5.8s 2s var(--motion-ease-standard) infinite;
+}
+
+.button {
+  transition:
+    transform var(--motion-fast) var(--motion-ease-standard),
+    background-color var(--motion-fast) var(--motion-ease-standard),
+    color var(--motion-fast) var(--motion-ease-standard),
+    border-color var(--motion-fast) var(--motion-ease-standard);
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.015);
+}
+
+.button:active {
+  transform: translateY(0) scale(.985);
+}
+
+.button--ghost span {
+  display: inline-block;
+  transition: transform var(--motion-fast) var(--motion-ease-standard);
+}
+
+.button--ghost:hover span {
+  transform: translate3d(3px, 3px, 0);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--motion-fast) var(--motion-ease-standard);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@keyframes hero-panel-in {
+  from { opacity: 0; transform: scale(.985) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes headline-push {
+  from {
+    opacity: 0;
+    transform: translateY(44px);
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes orbit-in {
+  from { opacity: 0; transform: scale(.72); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes orbit-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.035); opacity: .78; }
+}
+
+@keyframes signal-1-in {
+  from { opacity: 0; transform: translate3d(-34px, 34px, 0) rotate(-12deg) scale(.92); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) rotate(-5deg) scale(1); }
+}
+
+@keyframes signal-2-in {
+  from { opacity: 0; transform: translate3d(38px, 24px, 0) rotate(11deg) scale(.92); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) rotate(4deg) scale(1); }
+}
+
+@keyframes signal-3-in {
+  from { opacity: 0; transform: translate3d(-28px, 30px, 0) rotate(-8deg) scale(.92); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) rotate(-2deg) scale(1); }
+}
+
+@keyframes signal-1-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-5deg); }
+  50% { transform: translate3d(12px, 8px, 0) rotate(-3deg); }
+}
+
+@keyframes signal-2-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(4deg); }
+  50% { transform: translate3d(-13px, 10px, 0) rotate(2deg); }
+}
+
+@keyframes signal-3-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+  50% { transform: translate3d(10px, -9px, 0) rotate(-1deg); }
+}
+
+@keyframes insight-in {
+  from { opacity: 0; transform: translateY(28px) scale(.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes insight-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.008); }
+}
+
+@keyframes insight-sheen {
+  0%, 58% { transform: translateX(-110%); opacity: 0; }
+  66% { opacity: 1; }
+  82%, 100% { transform: translateX(110%); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .signal-card--1,
+  .signal-card--2,
+  .signal-card--3,
+  .insight-card,
+  .signal-orbit {
+    animation-duration: 560ms;
+  }
+}
