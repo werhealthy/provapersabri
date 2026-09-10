@@ -12,6 +12,7 @@ The current baseline includes:
 - current Senty logo stored locally in `public/senty-logo.svg`
 - responsive hero prototype
 - GitHub Pages deployment workflow in `.github/workflows/deploy-pages.yml`
+- GitHub Pages configured to publish from GitHub Actions
 
 ## Local development
 
