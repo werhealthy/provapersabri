@@ -31,7 +31,7 @@ export const siteContent = {
   method: {
     eyebrow: 'IL METODO SENTY',
     title: 'Dal rumore a una decisione.',
-    intro: 'Cinque passaggi, un solo flusso. Senty porta feedback sparsi e segnali deboli fino a ciò che merita davvero attenzione.',
+    intro: 'Cinque passaggi, un solo flusso. Ogni scroll porta più chiarezza: dalle voci sparse a una prossima mossa concreta.',
     steps: [
       {
         id: 'raccogli',
@@ -40,6 +40,7 @@ export const siteContent = {
         body: 'Recensioni, survey, commenti e feedback entrano nello stesso spazio. Le fonti restano riconoscibili, ma smettono di vivere isolate.',
         note: 'Tutte le voci, nello stesso posto.',
         visual: 'collect',
+        image: 'https://raw.githubusercontent.com/SabRo11/Senty/main/public/raccogli.jpg',
       },
       {
         id: 'analizza',
@@ -48,6 +49,7 @@ export const siteContent = {
         body: 'L’AI classifica temi, sentiment e ricorrenze. Il volume diventa struttura e le conversazioni iniziano a mostrare pattern leggibili.',
         note: 'Il caos prende una forma.',
         visual: 'analyze',
+        image: 'https://raw.githubusercontent.com/SabRo11/Senty/main/public/analizza.jpg',
       },
       {
         id: 'comprendi',
@@ -56,6 +58,7 @@ export const siteContent = {
         body: 'Senty collega i segnali e mette in evidenza ciò che sta davvero muovendo la percezione delle persone, anche quando il segnale è ancora piccolo.',
         note: 'Non solo cosa succede. Perché.',
         visual: 'understand',
+        image: 'https://raw.githubusercontent.com/SabRo11/Senty/main/public/comprendi.jpg',
       },
       {
         id: 'confronta',
@@ -64,6 +67,7 @@ export const siteContent = {
         body: 'Periodi, canali, temi e benchmark diventano confrontabili. Capisci cosa sta migliorando, cosa sta peggiorando e dove cambia il contesto.',
         note: 'Un segnale conta quando ha un contesto.',
         visual: 'compare',
+        image: 'https://raw.githubusercontent.com/SabRo11/Senty/main/public/confronta.jpg',
       },
       {
         id: 'restituisci',
@@ -72,6 +76,7 @@ export const siteContent = {
         body: 'Gli insight diventano priorità chiare, condivisibili e pronte per l’azione. Meno dashboard da interpretare, più prossime mosse da discutere.',
         note: 'Dall’insight alla prossima decisione.',
         visual: 'return',
+        image: 'https://raw.githubusercontent.com/SabRo11/Senty/main/public/restituisci.jpg',
       },
     ],
   },
