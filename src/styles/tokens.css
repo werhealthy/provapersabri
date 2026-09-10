@@ -1,0 +1,27 @@
+:root {
+  --senty-blue: #2b3dfa;
+  --senty-navy: #171d70;
+  --senty-deep-navy: #0d103a;
+  --senty-lavender: #b9baf3;
+  --senty-positive: #4ee94d;
+  --senty-neutral: #ffd91d;
+  --senty-negative: #ff542d;
+  --senty-white: #ffffff;
+  --senty-offwhite: #f7f7fb;
+  --senty-ink: #111323;
+  --senty-muted: #666a7c;
+
+  --font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 36px;
+  --radius-xl: 48px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 18px 60px rgba(13, 16, 58, 0.12);
+  --shadow-soft: 0 10px 40px rgba(13, 16, 58, 0.08);
+
+  --page-gutter: clamp(18px, 3vw, 48px);
+  --content-max: 1480px;
+}
