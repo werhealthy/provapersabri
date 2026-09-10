@@ -67,7 +67,7 @@ export function MethodStory() {
 
       const target = targetRef.current
       const current = progressRef.current
-      const follow = reducedMotion.matches ? 1 : 1 - Math.exp(-dt / 92)
+      const follow = reducedMotion.matches ? 1 : 1 - Math.exp(-dt / 110)
       const next = current + (target - current) * follow
 
       progressRef.current = Math.abs(target - next) < 0.0005 ? target : next
@@ -146,6 +146,7 @@ export function MethodStory() {
                     '--visual-y': `${distance * 56}%`,
                     '--visual-opacity': opacity,
                     '--ui-opacity': uiOpacity,
+                    '--ui-shift': `${(1 - uiOpacity) * 10}px`,
                     zIndex: 10 + index,
                   } as CSSProperties}
                 >
@@ -166,9 +167,9 @@ export function MethodStory() {
                 const yTo = titlePosition(index, nextSegment)
                 const y = yFrom + (yTo - yFrom) * easedPhase
                 const distance = Math.abs(index - progress)
-                const activeWeight = clamp(1 - distance, 0, 1)
-                const bodyOpacity = materialStandardEase(activeWeight)
-                const titleOpacity = 0.27 + activeWeight * 0.73
+                const titleWeight = materialStandardEase(clamp(1 - distance * 1.15, 0, 1))
+                const bodyWeight = materialStandardEase(clamp(1 - distance * 1.9, 0, 1))
+                const titleOpacity = 0.27 + titleWeight * 0.73
 
                 return (
                   <button
@@ -180,8 +181,8 @@ export function MethodStory() {
                     style={{
                       '--copy-y': `${y}em`,
                       '--title-opacity': titleOpacity,
-                      '--body-opacity': bodyOpacity,
-                      '--body-shift': `${(1 - bodyOpacity) * 12}px`,
+                      '--body-opacity': bodyWeight,
+                      '--body-shift': `${(1 - bodyWeight) * 12}px`,
                     } as CSSProperties}
                   >
                     <span className="method-klarna__step-title">{step.title}</span>
