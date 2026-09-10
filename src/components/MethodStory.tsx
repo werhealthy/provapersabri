@@ -4,7 +4,6 @@ import { siteContent } from '../content/site'
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value))
 
 function materialStandardEase(t: number) {
-  // Material 3 Standard easing: cubic-bezier(0.2, 0, 0, 1)
   const x1 = 0.2
   const y1 = 0
   const x2 = 0
@@ -144,7 +143,7 @@ export function MethodStory() {
                   className="method-shot"
                   key={step.id}
                   style={{
-                    '--visual-y': distance * 56,
+                    '--visual-y': `${distance * 56}%`,
                     '--visual-opacity': opacity,
                     '--ui-opacity': uiOpacity,
                     zIndex: 10 + index,
@@ -179,10 +178,10 @@ export function MethodStory() {
                     onClick={() => jumpToStep(index)}
                     aria-current={index === activeIndex ? 'step' : undefined}
                     style={{
-                      '--copy-y': y,
+                      '--copy-y': `${y}em`,
                       '--title-opacity': titleOpacity,
                       '--body-opacity': bodyOpacity,
-                      '--body-shift': (1 - bodyOpacity) * 12,
+                      '--body-shift': `${(1 - bodyOpacity) * 12}px`,
                     } as CSSProperties}
                   >
                     <span className="method-klarna__step-title">{step.title}</span>
