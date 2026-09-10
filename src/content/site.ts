@@ -1,7 +1,7 @@
 export const siteContent = {
   brand: {
     name: 'Senty',
-    logoSrc: './senty-logo.svg',
+    logoSrc: `${import.meta.env.BASE_URL}senty-logo.svg`,
   },
   nav: {
     links: [
